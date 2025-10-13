@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Phishing Landing</title>
+  </head>
+  <body>
+    <h1>Phishing Simulation Landing Page</h1>
+    <p>This is a sample landing page for campaign: {{ campaign_id if campaign_id else 'Create/Preview' }}</p>
+    <form method="post" action="/create">
+      <label>Campaign name: <input type="text" name="name"/></label><br/>
+      <label>Template HTML (simple):</label><br/>
+      <textarea name="template" rows="6" cols="60">&lt;h2&gt;Sample&lt;/h2&gt;&lt;p&gt;Click here&lt;/p&gt;</textarea><br/>
+      <button type="submit">Create Campaign</button>
+    </form>
+  </body>
+</html>
