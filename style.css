@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(16, 142, 119);
+}
+
+.web {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(44, 40, 40, 0.668);
+  box-shadow: 0 0 10px rgba(45, 36, 36, 0.2);
+  color: oklch(78.448% 0.22531 147.142);
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.web h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.input-box {
+  width: 100%;
+  height: 50px;
+  margin: 15px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgb(201,191,191);
+  border-radius: 40px;
+  font-size: 16px;
+  color: hsl(60, 2%, 11%);
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: #ffffffe4;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -10px 0 15px;
+}
+
+.remember-forgot a {
+  color: white;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background: white;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: hsl(74, 55%, 62%);
+}
+
+.register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-link a {
+  color: wheat;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+
+.warning-message {
+  display: none;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  font-size: 14px;
+  color: #ffcc00;
+}
+
+
+#showWarning:checked ~ .warning-message {
+  display: block;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
